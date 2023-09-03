@@ -1,0 +1,33 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-bar {
+    overflow: hidden;
+    position: relative;
+    width: 66%;
+}
+
+input[type="text"] {
+    background: #fff;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 0px 1px 0px #00000029;
+    color: #707070;
+    font-size: 14px;
+    padding: 10px 30px 10px 16px;
+    width: 100%;
+}
+
+.fa.fa-search {
+    color: #224E83;
+    font-size: 16px;
+}
+
+.search-icon {
+    padding: 10px;
+    position: absolute;
+    right: 0;
+}
