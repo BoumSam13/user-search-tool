@@ -1,0 +1,12 @@
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+@media only screen and (min-width: 1025px) {
+    .user-list {
+        margin-bottom: 60px;
+    }
+}
