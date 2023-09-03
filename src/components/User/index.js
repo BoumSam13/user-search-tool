@@ -8,7 +8,7 @@ const User = ({ user }) => {
             <div className="user-profile">
                 <h3>{user.name}</h3>
                 <p>{user.company}</p>
-                <p>{user.companyUrl}</p>
+                <p><a href={user.companyUrl} target="_blank" rel="noreferrer">Company Website</a></p>
                 <p>{user.totalAlbums}</p>
             </div>
         </div>

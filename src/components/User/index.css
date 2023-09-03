@@ -22,7 +22,8 @@
     width: 123px;
 }
 
-.user-profile {
+.user-profile,
+.user-profile a {
     color: #224E83;
 }
 
@@ -55,7 +56,7 @@
     .user {
         border: 1px solid #707070;
         padding: 24px;
-        width: unset;
+        width: 400px;
     }
 
     .user:nth-child(even),
