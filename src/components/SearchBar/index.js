@@ -1,11 +1,30 @@
+import { useState } from "react";
 import './index.css';
 
-const SearchBar = () => {
+const SearchBar = ({ onSubmit, onInputNameChange }) => {
+    const [name, setName] = useState('');
+
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        onSubmit(name);
+    };
+
+    const onInputChange = (event) => {
+        const nameFromInput = event.target.value;
+        setName(nameFromInput);
+        onInputNameChange(nameFromInput);
+    };
+
     return (
-        <form className="search-container">
+        <form className="search-container" onSubmit={handleFormSubmit}>
             <div className="search-bar">
-                <input type="text" id="search" placeholder="Search by name..."/>
-                <i class="fa fa-search search-icon"></i>
+                <input 
+                    onChange={onInputChange}  
+                    value={name} 
+                    type="text" 
+                    placeholder="Search by name..."
+                />
+                <button className="search-icon"><i className="fa fa-search"></i></button>
             </div>
         </form>
     );
