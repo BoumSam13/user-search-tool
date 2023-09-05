@@ -37,15 +37,17 @@ const buildUserData = async (allUsers) => {
     return users;
 };
 
-export const getAllUserData = async () => {
-    const allUsers = await getJsonResponseFromApi("https://jsonplaceholder.typicode.com/users");
+export const getAllUserData = async (page) => {
+    const allUsers = await getJsonResponseFromApi(
+        `https://jsonplaceholder.typicode.com/users?_page=${page}&_limit=15`
+    );
     const users = await buildUserData(allUsers);
     return users;
 };
 
-export const getAllUsersByName = async (name) => {
+export const getAllUsersByName = async (name, page) => {
     const allUsers = await getJsonResponseFromApi(
-        `https://jsonplaceholder.typicode.com/users?name_like=${encodeURIComponent(name)}`
+        `https://jsonplaceholder.typicode.com/users?_page=${page}&_limit=15&name_like=${encodeURIComponent(name)}`
     );
     const users = await buildUserData(allUsers);
     return users;
