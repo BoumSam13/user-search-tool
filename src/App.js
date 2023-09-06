@@ -3,8 +3,8 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import logo from './logo.svg';
 import './App.css';
 import { getAllUserData, getAllUsersByName } from "./api";
-import SearchBar from "./components/SearchBar";
-import UserList from "./components/UserList";
+import SearchBar from "./components/SearchBar/SearchBar";
+import UserList from "./components/UserList/UserList";
 
 const App = () => {
     const [users, setUsers] = useState([]);

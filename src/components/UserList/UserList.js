@@ -1,5 +1,5 @@
-import './index.css';
-import User from "../User"
+import './UserList.css';
+import User from "../User/User"
 
 const UserList = ({ users }) => {
     return (

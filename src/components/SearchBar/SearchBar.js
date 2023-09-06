@@ -1,5 +1,5 @@
 import { useState, forwardRef } from "react";
-import './index.css';
+import './SearchBar.css';
 
 const SearchBar = forwardRef(({ onSubmit, onInputNameChange }, ref) => {
     const [name, setName] = useState('');
@@ -19,13 +19,16 @@ const SearchBar = forwardRef(({ onSubmit, onInputNameChange }, ref) => {
         <form className="search-container" onSubmit={handleFormSubmit}>
             <div className="search-bar">
                 <input 
+                    data-testid="search-bar"
                     onChange={onInputChange}  
                     value={name} 
                     type="text" 
                     placeholder="Search by name..."
                     ref={ref}
                 />
-                <button className="search-icon"><i className="fa fa-search"></i></button>
+                <button data-testid="search-icon" className="search-icon">
+                    <i className="fa fa-search"></i>
+                </button>
             </div>
         </form>
     );
